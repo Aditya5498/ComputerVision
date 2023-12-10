@@ -21,7 +21,7 @@ int main(int argc, const char** argv){
 
     //save image
     imwrite("../../imgs/savedImgs/grayedImage.jpeg",grayImg);
-
+    imwrite("../../imgs/savedImgs/coloredImage.jpeg",colorImg);
     //get the pixels / matrix size of image
     int rows      = colorImg.rows - 1;
     int cols     = colorImg.cols - 1;
@@ -34,6 +34,9 @@ int main(int argc, const char** argv){
     cout<<"\n\tFind the saved images in imgs/savedImgs/<image>.jpeg\n";
 
     //wait for any key stroke
+    
+    imshow("Coloured Image",colorImg);
+    imshow("Gray scale Image",grayImg);
     waitKey(0);
     return 0;
 }
